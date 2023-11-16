@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_page"
+    tools:context=".ui.DashboardActivity">
+
+    <RelativeLayout
+        android:background="@drawable/edit_text_bg"
+        android:id="@+id/action_bar"
+        android:layout_margin="@dimen/_10sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_marginStart="10dp"
+            android:layout_centerVertical="true"
+            android:id="@+id/searchIcon"
+            android:src="@drawable/baseline_search_24"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"/>
+
+        <EditText
+            android:layout_toEndOf="@id/searchIcon"
+            android:id="@+id/searchHotel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Search hotel by name..."
+            android:textColorHint="#707070"
+            android:padding="@dimen/_10sdp"
+            android:background="@drawable/edit_text_bg"
+            android:textColor="@color/black"/>
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:id="@+id/recyclerview"
+        android:layout_centerHorizontal="true"
+        tools:listitem="@layout/cl_restro_layout"
+        android:layout_height="match_parent"
+        android:layout_below="@id/action_bar"
+       android:layout_margin="@dimen/_8sdp" />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="wrap_content"
+        android:id="@+id/add_restro"
+        android:backgroundTint="@color/red"
+        app:cornerRadius="@dimen/_11sdp"
+        android:layout_margin="@dimen/_20sdp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_height="wrap_content"
+        android:text="Add Restro"/>
+
+</RelativeLayout>
