@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/background_page">
+
+    <LinearLayout
+        android:padding="@dimen/_20sdp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_marginTop="@dimen/_10sdp"
+            android:id="@+id/addItemImage"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_180sdp"
+            android:src="@drawable/baseline_image_24"
+            android:scaleType="centerCrop" />
+
+
+
+        <EditText
+            android:id="@+id/addItemName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:hint="Item Name"
+            android:textColorHint="@color/gray"
+            
+            android:padding="@dimen/_10sdp"
+            android:background="@drawable/edit_text_bg"
+            android:textColor="@color/black"/>
+
+        <EditText
+            android:id="@+id/addItemPrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:hint="Price"
+            android:inputType="number"
+            android:textColorHint="@color/gray"
+            android:padding="@dimen/_10sdp"
+            android:background="@drawable/edit_text_bg"
+            android:textColor="@color/black"/>
+
+        <EditText
+            android:id="@+id/addItemDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:hint="Description"
+            android:inputType="text"
+            android:textColorHint="@color/gray"
+            android:padding="@dimen/_10sdp"
+            android:background="@drawable/edit_text_bg"
+            android:textColor="@color/black"/>
+
+
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="match_parent"
+            android:id="@+id/addNewItemBtn"
+            android:layout_height="@dimen/_45sdp"
+            android:backgroundTint="@color/red"
+            app:cornerRadius="@dimen/_11sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:text="Add Item"
+            android:textColor="@color/white"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/closeDialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Close"
+            android:fontFamily="@font/semibold_font"
+            android:textSize="@dimen/_14sdp"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_10sdp"/>
+
+    </LinearLayout>
+
+
+
+</ScrollView>

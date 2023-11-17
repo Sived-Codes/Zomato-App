@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,53 +7,35 @@
     android:background="@color/background_page"
     tools:context=".ui.DashboardActivity">
 
-    <RelativeLayout
-        android:background="@drawable/edit_text_bg"
-        android:id="@+id/action_bar"
-        android:layout_margin="@dimen/_10sdp"
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottomLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
+        android:id="@+id/bottomLayout"
+        app:cardCornerRadius="@dimen/_11sdp"
+        app:cardElevation="0dp"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_6sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fragment_container"
+        app:layout_constraintStart_toStartOf="parent"
         android:layout_height="wrap_content">
-
-        <ImageView
-            android:layout_marginStart="10dp"
-            android:layout_centerVertical="true"
-            android:id="@+id/searchIcon"
-            android:src="@drawable/baseline_search_24"
-            android:layout_width="@dimen/_20sdp"
-            android:layout_height="@dimen/_20sdp"/>
-
-        <EditText
-            android:layout_toEndOf="@id/searchIcon"
-            android:id="@+id/searchHotel"
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_navigation"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Search hotel by name..."
-            android:textColorHint="#707070"
-            android:padding="@dimen/_10sdp"
-            android:background="@drawable/edit_text_bg"
-            android:textColor="@color/black"/>
+            app:menu="@menu/bottom_nav_menu" />
 
-    </RelativeLayout>
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="match_parent"
-        android:id="@+id/recyclerview"
-        android:layout_centerHorizontal="true"
-        tools:listitem="@layout/cl_restro_layout"
-        android:layout_height="match_parent"
-        android:layout_below="@id/action_bar"
-       android:layout_margin="@dimen/_8sdp" />
+    </com.google.android.material.card.MaterialCardView>
 
 
-    <com.google.android.material.button.MaterialButton
-        android:layout_width="wrap_content"
-        android:id="@+id/add_restro"
-        android:backgroundTint="@color/red"
-        app:cornerRadius="@dimen/_11sdp"
-        android:layout_margin="@dimen/_20sdp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_height="wrap_content"
-        android:text="Add Restro"/>
-
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

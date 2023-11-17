@@ -1,101 +1,236 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:padding="@dimen/_10sdp"
-    android:background="@color/background_page"
     android:layout_height="match_parent"
+    android:background="@color/background_page"
     tools:context=".ui.AuthActivity">
 
     <RelativeLayout
-        android:id="@+id/action_bar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent">
 
         <ImageView
-            android:src="@drawable/baseline_arrow_back_ios_24"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_30sdp"/>
+            android:id="@+id/bannerImg"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_118sdp"
+            android:src="@drawable/home_banner" />
 
+        <LinearLayout
+            android:visibility="visible"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:layout_below="@id/bannerImg"
+            android:id="@+id/login_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/_20sdp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:gravity="center"
+                android:text="Cities #1 Food Delivery \n and Dinning App"
+                android:textColor="@color/black"
+                android:fontFamily="@font/semibold_font"
+                android:textSize="@dimen/_15sdp" />
+
+
+            <LinearLayout
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0.7dp"
+                    android:layout_weight="1"
+                    android:background="@color/gray"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginVertical="@dimen/_10sdp"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:layout_marginBottom="@dimen/_20sdp"
+                    android:gravity="center"
+                    android:text="Login and Signup"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/regular_font"
+                    android:textSize="@dimen/_10sdp" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0.7dp"
+                    android:layout_weight="1"
+                    android:background="@color/gray"/>
+            </LinearLayout>
+
+            <EditText
+                android:layout_marginTop="@dimen/_20sdp"
+                android:id="@+id/userMobile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text_bg"
+                android:hint="Enter Phone Number"
+                android:inputType="phone"
+                android:gravity="center"
+                android:maxLength="10"
+                android:textSize="@dimen/_12sdp"
+                android:fontFamily="@font/semibold_font"
+                android:padding="@dimen/_10sdp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/gray" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/loginBtn"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_45sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:backgroundTint="@color/red"
+                android:text="Login"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                app:cornerRadius="@dimen/_11sdp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginVertical="@dimen/_20sdp"
+                android:gravity="center"
+                android:text="By continue you agree our terms and policies"
+                android:textColor="@color/black"
+                android:fontFamily="@font/regular_font"
+                android:textSize="@dimen/_10sdp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginVertical="@dimen/_20sdp"
+                android:gravity="center"
+                android:text="Mobile: 8889818200 \n OTP: 250305"
+                android:textColor="@color/black"
+                android:fontFamily="@font/regular_font"
+                android:textSize="@dimen/_12sdp" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:visibility="gone"
+            android:gravity="center"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:layout_below="@id/bannerImg"
+            android:id="@+id/otp_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/_20sdp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:gravity="center"
+                android:text="OTP Verification"
+                android:textColor="@color/black"
+                android:fontFamily="@font/semibold_font"
+                android:textSize="@dimen/_15sdp" />
+
+
+            <LinearLayout
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginVertical="@dimen/_8sdp"
+                    android:gravity="center"
+                    android:fontFamily="@font/semibold_font"
+                    android:text="we have sent a verification code to"
+                    android:textSize="@dimen/_12sdp" />
+
+                <TextView
+                    android:id="@+id/codeSentTo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="+91888981800"
+                    android:fontFamily="@font/semibold_font"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12sdp" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0.7dp"
+                    android:layout_weight="1"
+                    android:background="@color/gray"/>
+            </LinearLayout>
+
+            <EditText
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text_bg"
+                android:hint="Enter six digit OTP"
+                android:inputType="phone"
+                android:gravity="center"
+                android:id="@+id/otpEditText"
+
+                android:maxLength="6"
+                android:textSize="@dimen/_12sdp"
+                android:fontFamily="@font/semibold_font"
+                android:padding="@dimen/_10sdp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/gray" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/verifyBtn"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_45sdp"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:backgroundTint="@color/red"
+                android:text="Verify"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                app:cornerRadius="@dimen/_11sdp" />
+
+            <TextView
+                android:id="@+id/resentBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:gravity="center"
+                android:text="Didn't get the OTP ? Resend SMS in"
+                android:textColor="@color/black"
+                android:fontFamily="@font/regular_font"
+                android:textSize="@dimen/_12sdp" />
+
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/pd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
     </RelativeLayout>
-    <LinearLayout
-        android:layout_marginTop="@dimen/_50sdp"
-        android:id="@+id/login_layout"
-        android:layout_below="@id/action_bar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="@dimen/_32sdp"
-            android:layout_marginVertical="@dimen/_10sdp"
-            android:layout_marginStart="@dimen/_5sdp"
-            android:textColor="@color/black"
-            android:layout_marginBottom="@dimen/_20sdp"
-            android:text="Hello user !"/>
-
-        <TextView
-
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="@dimen/_12sdp"
-            android:layout_marginVertical="@dimen/_10sdp"
-            android:layout_marginStart="@dimen/_5sdp"
-            android:textColor="@color/black"
-            android:text="Enter Your full name"/>
-        <EditText
-            android:id="@+id/userName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Full Name"
-            android:textColorHint="#707070"
-            android:padding="@dimen/_10sdp"
-            android:background="@drawable/edit_text_bg"
-            android:textColor="@color/black"/>
 
 
-        <TextView
-            android:layout_marginTop="@dimen/_20sdp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="@dimen/_12sdp"
-            android:layout_marginVertical="@dimen/_10sdp"
-            android:layout_marginStart="@dimen/_5sdp"
-            android:textColor="@color/black"
-            android:text="Enter Your 10 digit number"/>
-
-        <EditText
-            android:id="@+id/userMobile"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Ex . 98765543210"
-            android:textColorHint="#707070"
-            android:inputType="phone"
-            android:maxLength="10"
-            android:padding="@dimen/_10sdp"
-            android:background="@drawable/edit_text_bg"
-            android:textColor="@color/black"/>
-
-        <com.google.android.material.button.MaterialButton
-            android:layout_width="match_parent"
-            android:id="@+id/loginBtn"
-            android:layout_height="@dimen/_45sdp"
-            android:backgroundTint="@color/red"
-            app:cornerRadius="@dimen/_11sdp"
-            android:layout_marginTop="@dimen/_20sdp"
-            android:text="Login"
-            android:textColor="@color/white"
-            android:textStyle="bold"/>
-
-    </LinearLayout>
-
-    <ProgressBar
-        android:visibility="gone"
-        android:layout_centerInParent="true"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/pd"/>
-
-</RelativeLayout>
+</ScrollView>
